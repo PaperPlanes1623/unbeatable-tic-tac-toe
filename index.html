@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <title>Tic Tac Toe</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <table>
+    <tr>
+      <td class="cell" id="0"></td>
+      <td class="cell" id="1"></td>
+      <td class="cell" id="2"></td>
+    </tr>
+    <tr>
+      <td class="cell" id="3"></td>
+      <td class="cell" id="4"></td>
+      <td class="cell" id="5"></td>
+    </tr>
+    <tr>
+      <td class="cell" id="6"></td>
+      <td class="cell" id="7"></td>
+      <td class="cell" id="8"></td>
+    </tr>
+  </table>
+  <div class="endgame">
+    <div class="text"></div>
+  </div>
+  <div class="selectSym">
+    <h2 class="h3">Unbeatable Tic Tac Toe</h3>
+      <br />
+      <button type="button" class="btn btn-danger" onClick="selectSym('X')">X</button>
+      <button type="button" class="btn btn-danger" onClick="selectSym('O')">O</button>
+      <br /><br />
+      <h4>pick a symbol to start</h4>
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-secondary center-block" onClick="startGame()">Start Over</button>
+  </div>
+  <script src="Main.js"></script>
+</body>
+
+</html>
