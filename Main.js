@@ -32,7 +32,7 @@ function selectSym(sym) {
   cpu = sym === 'O' ? 'X' : 'O';
   board = Array.from(Array(9).keys());
   for (let i = 0; i < squares.length; i++) {
-    squares[i].addEventListener('click', turnClick, false);
+    squares[i].addEventListener('click', changeTurn, false);
   }
   if (cpu === 'X') {
     turn(bestSpot(), cpu);
@@ -40,7 +40,7 @@ function selectSym(sym) {
   document.querySelector('.selectSym').style.display = "none";
 }
 
-function turnClick(square) {
+function changeTurn(square) {
   if (typeof board[square.target.id] === 'number') {
     turn(square.target.id, human);
     if (!checkWin(board, human) && !checkTie())
@@ -74,7 +74,7 @@ function gameOver(gameWon) {
       gameWon.player === human ? "blue" : "red";
   }
   for (let i = 0; i < squares.length; i++) {
-    squares[i].removeEventListener('click', turnClick, false);
+    squares[i].removeEventListener('click', changeTurn, false);
   }
   declareWinner(gameWon.player === human ? "You win!" : "You lose");
 }
@@ -95,7 +95,7 @@ function checkTie() {
   if (emptySquares().length === 0) {
     for (cell of squares) {
       cell.style.backgroundColor = "green";
-      cell.removeEventListener('click', turnClick, false);
+      cell.removeEventListener('click', changeTurn, false);
     }
     declareWinner("Tie game");
     return true;
